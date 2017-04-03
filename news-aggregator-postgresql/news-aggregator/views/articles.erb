@@ -1,0 +1,9 @@
+<h1>Article Index<h1>
+  <ul>
+    <% @articles.each do |article| %>
+      <% array = article.split(",") %>
+      <% url = "http://" + array[1]%>
+      <li>Name: <%= array[0] %>, URL: <a href=<%= url %> target="_blank"><%=array[1]%></a>, Description: <%=array[2]%></li>
+
+    <% end %>
+  </ul>

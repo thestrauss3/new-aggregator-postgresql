@@ -1,0 +1,19 @@
+<!-- Put your News Aggregator new.erb code here -->
+
+
+<h1>Submit New Article</h1>
+<% if @errors %>
+  <h3> Error: <%= @errors%></h3>
+<% end %>
+<form action="/articles/new" method="post">
+  <label for="Title">Input Article Name:</label>
+  <input type="text" id="Title" name="Title" value="<%= @title %>">
+
+  <label for="url">Article URL:</label>
+  <input type="text" id="url" name="url" value="<%= @url %>">
+
+  <label for="description">Description:</label>
+  <input type="text" id="description" name="description" value="<%= @description %>">
+
+  <input id="Submit" type="submit">
+</form>
